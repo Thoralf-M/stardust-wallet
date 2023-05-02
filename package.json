@@ -20,6 +20,6 @@
     "vite-plugin-static-copy": "^0.13.0"
   },
   "dependencies": {
-    "@iota/wallet-wasm": "^1.0.0-alpha.1"
+    "@iota/sdk-wasm": "../iota-sdk/bindings/wasm"
   }
 }

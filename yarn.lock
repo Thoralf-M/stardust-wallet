@@ -112,19 +112,19 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz#c5a1a4bfe1b57f0c3e61b29883525c6da3e5c091"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
-"@iota/types@^1.0.0-beta.11":
-  version "1.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@iota/types/-/types-1.0.0-beta.15.tgz#1a1f5722ef176a45d03e92f4cb5bd9a4ea74ec27"
-  integrity sha512-67DrzDO5bl2c7RIMpOdtjdOa27Bv1EmX/BHPTQD8c3RtPPAzJpSIpuI8JsIDl3U6Qe4zdLX3kRv9zGBXcr0fZA==
-
-"@iota/wallet-wasm@^1.0.0-alpha.1":
-  version "1.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@iota/wallet-wasm/-/wallet-wasm-1.0.0-alpha.1.tgz#9dc866054ea1f97d7128d3185ebaa311564b1059"
-  integrity sha512-YxyZ/EGY9EpasQ6MmNHJrU107ecIlD87O/I3HScil4mg8Z7e1SJeCDxLhGnEAcCycuOk5n2a3SE8kyUIwC5VAw==
+"@iota/sdk-wasm@../iota-sdk/bindings/wasm":
+  version "0.1.0"
   dependencies:
     "@iota/types" "^1.0.0-beta.11"
     node-fetch "^2.6.7"
     text-encoding "^0.7.0"
+  optionalDependencies:
+    fsevents "^2.3.2"
+
+"@iota/types@^1.0.0-beta.11":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@iota/types/-/types-1.0.0-beta.15.tgz#1a1f5722ef176a45d03e92f4cb5bd9a4ea74ec27"
+  integrity sha512-67DrzDO5bl2c7RIMpOdtjdOa27Bv1EmX/BHPTQD8c3RtPPAzJpSIpuI8JsIDl3U6Qe4zdLX3kRv9zGBXcr0fZA==
 
 "@jridgewell/resolve-uri@3.1.0":
   version "3.1.0"
@@ -351,7 +351,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
-fsevents@~2.3.2:
+fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
