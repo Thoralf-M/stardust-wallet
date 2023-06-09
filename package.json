@@ -20,6 +20,6 @@
     "vite-plugin-static-copy": "^0.13.0"
   },
   "dependencies": {
-    "@iota/sdk-wasm": "../iota-sdk/bindings/wasm"
+    "@iota/sdk-wasm": "link:../iota-sdk/bindings/wasm"
   }
 }

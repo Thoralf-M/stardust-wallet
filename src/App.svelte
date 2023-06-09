@@ -64,11 +64,11 @@
 
 <div style="position:fixed; bottom: 0; width: 100%; left: 0;">
   <a
-    href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/wasm"
+    href="https://github.com/iotaledger/iota-sdk/tree/develop/bindings/wasm"
     target="_blank"
     rel="noreferrer"
   >
-    Created with the wasm binding of wallet.rs
+    Created with the wasm binding of iota-sdk
   </a>
 </div>
 
