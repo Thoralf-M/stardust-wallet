@@ -1,12 +1,12 @@
 <svelte:options accessors />
 <script lang="ts">
-  import type { AccountManager } from "@iota/wallet-wasm/web";
+  import type { Wallet } from "@iota/wallet-wasm/web";
   import {accountsStore, selectedAccount} from './AccountsStore'
 
-  export let accountManager: AccountManager;
+  export let wallet: Wallet;
 
   const createAccount = async () => {
-    let account = await accountManager.createAccount({
+    let account = await wallet.createAccount({
       alias: $accountsStore.length.toString() || "0",
     });
     console.log("created account:", account);

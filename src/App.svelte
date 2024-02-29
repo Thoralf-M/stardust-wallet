@@ -1,10 +1,10 @@
 <script lang="ts">
-  import AccountManager from "./lib/AccountManager.svelte";
+  import Wallet from "./lib/Wallet.svelte";
   import CreateAccount from "./lib/CreateAccount.svelte";
   import Account from "./lib/Account.svelte";
   import AccountSelector from "./lib/AccountSelector.svelte";
   import { accountsStore } from "./lib/AccountsStore";
-  import { init } from "@iota/wallet-wasm/web";
+  import init, { CoinType } from "@iota/sdk-wasm/web";
   init()
     .then(() => console.log("initialized wasm"))
     .catch((err) => {
@@ -14,7 +14,7 @@
   let mnemonic =
     "run vessel latin forward topple sun wing swap sell drop sea move purity acoustic cannon barrel equal hard desk true tragic garage piece rule";
   let node = "https://api.testnet.shimmer.network";
-  let accountManager;
+  let wallet;
   let accounts = [];
   accountsStore.subscribe((value) => {
     accounts = value;
@@ -52,8 +52,8 @@
   <input size="50" bind:value={node} placeholder="node" />
 
   <div>
-    <AccountManager {mnemonic} {node} bind:accountManager />
-    <CreateAccount {accountManager} />
+    <Wallet {mnemonic} {node} bind:wallet />
+    <CreateAccount {wallet} />
   </div>
 
   <AccountSelector />
@@ -64,11 +64,11 @@
 
 <div style="position:fixed; bottom: 0; width: 100%; left: 0;">
   <a
-    href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/wasm"
+    href="https://github.com/iotaledger/iota-sdk/tree/develop/bindings/wasm"
     target="_blank"
     rel="noreferrer"
   >
-    Created with the wasm binding of wallet.rs
+    Created with the wasm binding of iota-sdk
   </a>
 </div>
 

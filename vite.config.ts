@@ -8,12 +8,12 @@ export default defineConfig({
     viteStaticCopy({
     targets: [
       {
-        src: 'node_modules/@iota/wallet-wasm/web/wasm/wallet_wasm_bg.wasm',
+        src: 'node_modules/@iota/sdk-wasm/web/wasm/iota_sdk_wasm_bg.wasm',
         dest: ''
       }
     ]
   })],
   optimizeDeps: {
-    exclude: ['@iota/wallet-wasm']
+    exclude: ['@iota/sdk-wasm']
   }
 })
